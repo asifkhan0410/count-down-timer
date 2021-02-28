@@ -16,6 +16,7 @@ body{
 }
 header{
     color: white;
+    flex: 0.15;
     text-transform: uppercase;
     font-weight: bolder;
     font-size: x-large;
@@ -23,6 +24,7 @@ header{
 }
 .timedisplay{
     display: flex;
+    flex:0.6;
 }
 .time{
     display: flex;
@@ -30,15 +32,63 @@ header{
     width: 200px;
     align-items: center;
 }
+.overlay{
+    height: 65.5px;
+    width: 111.5px;
+    background-color: hsl(236, 21%, 26%);
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 1px solid hsl(234, 17%, 12%);
+    margin: 0px 0px 10px 0px;
+}
+.time> h1{
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 10px;
+    color:hsl(345, 95%, 68%);
+    margin: 0px;
+    font-size: 4rem;
+    padding: 20px;
+    box-shadow: 0px 8px 0px -1px hsl(234, 17%, 12%);
+}
+.time>h1::before{
+    content: '';
+    background-color: hsl(234, 17%, 12%);
+    display: block;
+    margin: 41px 0px 0px -20px;
+    position: absolute;
+    border-radius: 0px 10px 10px 0px;
+    height: 10px;
+    width: 8px;
+    z-index: 2;
+
+}
+.time>h1::after{
+    content: '';
+    background-color: hsl(234, 17%, 12%);
+    display: block;
+    margin: -44px 0px 0px 83.5px;
+    position: absolute;
+    border-radius: 10px 0px 0px 10px;
+    height: 10px;
+    width: 8px;
+    z-index: 2;
+}
 .time >h3{
     color: hsl(237, 18%, 59%);
     text-transform: uppercase;
     font-weight: bolder;
     letter-spacing: 4px;
-    font-size: medium;
+    font-size: 0.7rem;
 }
 a>svg>path:hover{
     fill:hsl(345, 95%, 68%)
 }
+.socialtabs{
+    flex: 0.1;
+}
+.socialtabs>a{
+    margin:0px 8px;
+}
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color:hsl(345, 95%, 68%) ; text-decoration: none; }
