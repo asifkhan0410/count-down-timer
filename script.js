@@ -36,7 +36,6 @@ function displayTimeLeft(seconds){
     minute.innerHTML = `${minutes<10 ? '0': ''}${minutes}`;
     second.innerHTML = `${secondsLeft<10 ? '0': ''}${secondsLeft}`;    
 }
-
 const time = JSON.parse(localStorage.getItem('time')) || 14*86400
 
 timer(time);
