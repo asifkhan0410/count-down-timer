@@ -90,5 +90,5 @@ a>svg>path:hover{
 .socialtabs>a{
     margin:0px 8px;
 }
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; color: white; }
 .attribution a { color:hsl(345, 95%, 68%) ; text-decoration: none; }
