@@ -1,0 +1,44 @@
+body{
+    margin:0px;
+    background-color: hsl(235, 16%, 14%);
+    background-image: url(./images/bg-stars.svg);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+header{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: x-large;
+    letter-spacing: 7px;
+}
+.timedisplay{
+    display: flex;
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+}
+.time >h3{
+    color: hsl(237, 18%, 59%);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    font-size: medium;
+}
+a>svg>path:hover{
+    fill:hsl(345, 95%, 68%)
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
