@@ -3,6 +3,7 @@ const day = document.querySelector('.days');
 const hour = document.querySelector('.hours');
 const minute = document.querySelector('.minutes');
 const second = document.querySelector('.seconds');
+const overlayelement = document.querySelector('.overlay-seconds');
 
 function timer(seconds){
     
@@ -22,6 +23,7 @@ function timer(seconds){
 
 function displayTimeLeft(seconds){
     let secondsLeft = seconds;
+    let previousSecond = 0;
     const days = Math.floor(seconds/86400);
     secondsLeft = secondsLeft % 86400;
 
@@ -31,10 +33,18 @@ function displayTimeLeft(seconds){
     const minutes = Math.floor(secondsLeft/60);
     secondsLeft = secondsLeft % 60;
 
+    previousSecond = secondsLeft+1;
+    console.log(secondsLeft,previousSecond);
+
+    if(secondsLeft < previousSecond){
+        overlayelement.style.animationName = 'flip'
+    }
+    
     day.innerHTML = `${days<10 ? '0': ''}${days}`;
     hour.innerHTML = `${hours<10 ? '0': ''}${hours}`;
     minute.innerHTML = `${minutes<10 ? '0': ''}${minutes}`;
-    second.innerHTML = `${secondsLeft<10 ? '0': ''}${secondsLeft}`;    
+    second.innerHTML = `${secondsLeft<10 ? '0': ''}${secondsLeft}`; 
+       
 }
 const time = JSON.parse(localStorage.getItem('time')) || 14*86400
 

@@ -38,7 +38,7 @@ header{
     background-color: hsl(236, 21%, 26%);
     opacity: 0.5;
     position: absolute;
-    transform: rotateX(153deg);
+    /* transform: rotateX(153deg); */
     transform-origin: bottom;
     transition: 1s ease-in infinite;
     border-radius: 10px 10px 0px 0px;
