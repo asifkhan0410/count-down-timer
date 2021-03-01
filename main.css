@@ -95,3 +95,40 @@ a>svg>path:hover{
 }
 .attribution { font-size: 11px; text-align: center; color: white; }
 .attribution a { color:hsl(345, 95%, 68%) ; text-decoration: none; }
+
+@media only screen and (max-width:376px){
+    header{
+        flex:0.2;
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: 1.4rem;
+    }
+    .timedisplay{
+        flex: 0.55;
+    }
+    .time{
+        width:80px;
+    }
+    .overlay{
+        height:39.5px;
+        width:68.5px;
+    }
+    .time>h1{
+        font-size: 2.5rem;
+    padding: 12px;
+    }
+    .time>h3{
+        letter-spacing: 4px;
+    font-size: 0.4rem;
+    }
+    .time>h1::before{
+        margin:26px 0px 0px -12px;
+        height:6px;
+        width: 5px;
+    }
+    .time>h1::after{
+        margin:-28px 0px 0px 51.5px;
+        height:6px;
+        width:5px;
+    }
+}
